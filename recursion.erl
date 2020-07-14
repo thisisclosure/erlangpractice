@@ -54,6 +54,8 @@ pieces(N,OldN,Acc)->
 
 perfect(0)->
   false;
+perfect(1)->
+  true;
 perfect(N)->
   perfect(N,N,0).
 
@@ -71,5 +73,11 @@ perfect(N,Old,Acc)->
 %  F(5) == 120.
 
 test()->
-  fac2(5) == 120.
+  (fac2(5) == 120)
+  and
+  (fib(4) == 4)
+  and
+  (pieces(5) == 16)
+  and
+  perfect(1) and perfect(6) and (not perfect(7)).
   %testFac(fac) and testFac(fac2).
