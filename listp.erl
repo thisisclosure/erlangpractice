@@ -1,4 +1,4 @@
--module(lists).
+-module(listp).
 -export([product/1,maximum/1,test/0]).
 
 product(X)->
@@ -10,7 +10,7 @@ product([X|Xs],Acc) when is_number(X)->
   product(Xs,Acc*X).
 
 maximum(X)->
-  product(X,0).
+  maximum(X,0).
 
 maximum([],Max)->
   Max;
