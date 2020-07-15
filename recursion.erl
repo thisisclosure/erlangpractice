@@ -1,20 +1,20 @@
 -module(recursion).
 -export([fac/1,fac2/1,fib/1,test/0, sum/1, pieces/1, perfect/1,perfect/3]).
 
-fac(0) ->
+fac2(0) ->
   1;
-fac(X) ->
+fac2(X) ->
   X * fac(X-1).
 
-fac2(0)->
+fac(0)->
   1;
-fac2(N) when N > 0->
-  facR(N,1).
+fac(N) when N > 0->
+  fac(N,1).
 
-facR(0,Acc) ->
+fac(0,Acc) ->
   Acc;
-facR(N,Acc) when N>0->
-  facR(N-1,Acc*N).
+fac(N,Acc) when N>0->
+  fac(N-1,Acc*N).
 
 fib(0)->
   0;
